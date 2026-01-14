@@ -74,34 +74,41 @@ const Header = ({ onMenuClick }) => {
 
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <div className="header-left">
-        <img src={logo} alt="BlazeStride Logo" className="logo"/>
-        <a href="./">Tomate.</a>
-      </div>
-
-      <div className="header-right">
-        <ul className="header-links">
-          <li><Link to="/profile"></Link></li>
-          <li className="orange">
-            <a onClick={handleAuthClick} style={{ cursor: 'pointer' }}>
-              {isLoggedIn ? 'Log Out' : 'Log In'}
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      {showLogoutModal && (
-        <div className="logout-modal-overlay">
-          <div className="logout-modal">
-            <h3>Are you sure you want to log out?</h3>
-            <div className="logout-modal-buttons">
-              <button onClick={confirmLogout} className="confirm-btn">Yes</button>
-              <button onClick={cancelLogout} className="cancel-btn">Cancel</button>
-            </div>
-          </div>
+        {/* LEFT */}
+        <div className="header-left">
+            <img src={logo} alt="BlazeStride Logo" className="logo" />
+            <a href="./">TomatoGuard</a>
         </div>
-      )}
 
+        {/* CENTER NAVIGATION */}
+        <nav className="header-center">
+            <ul className="nav-pill">
+            <li><Link to="/forums">Forums</Link></li>
+            <li><Link to="/analytics">Analytics</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/citations">Citations</Link></li>
+            </ul>
+        </nav>
+
+        {/* RIGHT */}
+        <div className="header-right">
+            <button className="auth-btn" onClick={handleAuthClick}>
+            {isLoggedIn ? "Log Out" : "Sign In"}
+            </button>
+        </div>
+
+        {showLogoutModal && (
+            <div className="logout-modal-overlay">
+            <div className="logout-modal">
+                <h3>Are you sure you want to log out?</h3>
+                <div className="logout-modal-buttons">
+                <button onClick={confirmLogout} className="confirm-btn">Yes</button>
+                <button onClick={cancelLogout} className="cancel-btn">Cancel</button>
+                </div>
+            </div>
+            </div>
+        )}
     </header>
   );
 };
