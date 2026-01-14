@@ -1,18 +1,45 @@
+:root {
+    --color1: #f8ff76; /* Primary */
+    --color2: #e9523a; /* Accent */
+    --color3: #2d7731; /* Secondary */
+    --color4: #0f0f0f; /* Tertiary */
+    --text-light: white;
+    --transparent: rgba(255, 255, 255, 0.5);
+    --muted: black;
+}
+
 .section-one {
+    position: relative;
     width: 100vw;
     height: 90vh;
-    padding: 0 !important;
-    margin: 0 !important;
-  
-    /* Background image */
-    background-image: url("../assets/section1-bg.png");
+
+    background-image: url("/section1-bg.png");
     background-position: center;
 
-    /* Center content */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.section-one::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    gap: 0;
+
+    width: 100%;
+    height: 200px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        #2d7731
+    );
+
+    pointer-events: none;
 }
 
 .section-one p {
@@ -20,6 +47,7 @@
     font-size: 20px;
     font-style: normal;
     color: white;
+    margin: 0;
 
     animation: heroPanIn 2s ease-out forwards;
 }
@@ -28,7 +56,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
   
     padding: 20px 28px;
     border-radius: 12px;
@@ -37,18 +65,70 @@
 }
   
 .hero-content img {
-    width: 300px;
+    width: 200px;
     height: auto;
+
     animation: heroPanIn 1s ease-out forwards;
 }
   
 .hero-content h1 {
     font-family: "DM Serif Display", serif;
-    font-size: 200px;
+    font-size: 100px;
     font-weight: 700;
     font-style: italic;
     margin: 0;
+
     animation: heroPanIn 1.5s ease-out forwards;
+}
+
+.section-two {
+    width: 100vw;
+    height: 90vh;
+
+    background-color: var(--color3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-three {
+    width: 100vw;
+    height: 90vh;
+
+    background-image: url("/section3-bg.png");
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-four {
+    width: 100vw;
+    height: 90vh;
+
+    background-color: var(--color3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-five {
+    width: 100vw;
+    height: 90vh;
+
+    background-image: url("/section1-bg.png");
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes heroPanIn {
