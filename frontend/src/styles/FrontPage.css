@@ -1,11 +1,13 @@
 :root {
     --color1: #f8ff76; /* Primary */
     --color2: #e9523a; /* Accent */
-    --color3: #081700; /* Secondary */
-    --color4: #0f0f0f; /* Tertiary */
+    --color3: #2d7731; /* Secondary */
+    --color4: #081700; /* Tertiary */
     --text-light: white;
     --transparent: rgba(255, 255, 255, 0.5);
     --muted: black;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .section-one {
@@ -36,7 +38,7 @@
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0),
-        var(--color3)
+        var(--color4)
     );
 
     pointer-events: none;
@@ -108,17 +110,121 @@
     transform: translateY(-2px);
 }
 
+/* =========================
+   SECTION TWO
+========================= */
+
 .section-two {
     width: 100vw;
     height: 90vh;
-
-    background-color: var(--color3);
-
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: var(--color4);
 }
+  
+.testimonial-card {
+    width: 80%;
+    max-width: 1100px;
+    height: 360px;
+  
+    background: linear-gradient(135deg, var(--color3), var(--color4));
+    border-radius: 24px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 40px 50px;
+    position: relative;
+    overflow: hidden;
+  
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+  
+.testimonial-left {
+    max-width: 45%;
+    color: white;
+}
+  
+.rating {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+  
+.rating span {
+    font-weight: 500;
+    opacity: 0.9;
+}
+  
+.testimonial-text {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    opacity: 0.95;
+}
+  
+.client {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+  
+.avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+  
+.client-info h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+  
+.client-info span {
+    font-size: 13px;
+    opacity: 0.8;
+}
+  
+.testimonial-right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+  
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    position: absolute;
+    top: 30px;
+    left: 0;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+  
+.features li {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    width: fit-content;
+}
+  
+.tomato-image {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    height: 120%;
+    object-fit: contain;
+}
+  
 
 .section-three {
     width: 100vw;
@@ -167,5 +273,5 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
+}
   

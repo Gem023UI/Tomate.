@@ -23,7 +23,32 @@ export default function () {
                 </div>
             </div>
             <div className="section-two">
-
+                <div className="testimonial-card">
+                    <div className="testimonial-left">
+                        <div className="rating">
+                            ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+                        </div>
+                        <p className="testimonial-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                        <div className="client">
+                            <div className="avatar"></div>
+                            <div className="client-info">
+                            <h4>Estelle Darcy</h4>
+                            <span>Our Client</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="testimonial-right">
+                        <ul className="features">
+                            <li>Good Quality Plant</li>
+                            <li>24/7 Fast Service</li>
+                            <li>Quick Payment</li>
+                        </ul>
+                        <img src="/tomato2.png" alt="tomato" className="tomato-image" />
+                    </div>
+                </div>
             </div>
             <div className="section-three">
 
