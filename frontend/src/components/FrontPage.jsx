@@ -3,7 +3,7 @@ import MainLayout from "./layouts/MainLayout";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faArrowLeft, faArrowRight, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
 import "../styles/FrontPage.css"
 
 export default function () {
@@ -25,27 +25,12 @@ export default function () {
             <div className="section-two">
                 <div className="testimonial-card">
                     <div className="testimonial-left">
-                        <div className="rating">
-                            ⭐⭐⭐⭐⭐ <span>(5/5)</span>
-                        </div>
-                        <p className="testimonial-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam.
-                        </p>
-                        <div className="client">
-                            <div className="avatar"></div>
-                            <div className="client-info">
-                            <h4>Estelle Darcy</h4>
-                            <span>Our Client</span>
-                            </div>
-                        </div>
+                        <h1 className="testimonial-text">
+                            Detect Diseases of your Crops, in Real Time.
+                        </h1>
+                        <a href="">Check Now</a>
                     </div>
                     <div className="testimonial-right">
-                        <ul className="features">
-                            <li>Good Quality Plant</li>
-                            <li>24/7 Fast Service</li>
-                            <li>Quick Payment</li>
-                        </ul>
                         <img src="/tomato2.png" alt="tomato" className="tomato-image" />
                     </div>
                 </div>
@@ -54,9 +39,6 @@ export default function () {
 
             </div>
             <div className="section-four">
-
-            </div>
-            <div className="section-five">
 
             </div>
         </section>
