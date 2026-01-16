@@ -122,8 +122,8 @@
 }
   
 .testimonial-card {
-    width: 80%;
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1300px;
     height: 360px;
   
     background: linear-gradient(135deg, var(--color5), var(--color4));
@@ -163,12 +163,13 @@
     position: relative;
     height: 100%;
     width: 50%;
+    padding: 10px;
 }
 
 .tomato-image {
     position: absolute;
     bottom: -20px;
-    right: -20px;
+    right: 20px;
     height: 130%;
     object-fit: contain;
 } 
@@ -286,19 +287,97 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-  
 
 .section-four {
     width: 100vw;
-    height: 90vh;
-
-    background-color: var(--color4);
-
+    height: 80vh;
+    background: var(--color4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    color: var(--text-light);
 }
+  
+.section-title {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 44px;
+    margin-bottom: 12px;
+}
+  
+.section-subtitle {
+    font-family: "Poppins", serif;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+  
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+  
+.carousel:active {
+    cursor: grabbing;
+}
+  
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+  
+.carousel-item {
+    min-width: 280px;
+    height: 360px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+  
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: scale(0.85);
+    opacity: 0.6;
+}
+  
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.carousel-item h3 {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", serif;
+}
+  
+.carousel-item.active {
+    transform: scale(1.5);
+    opacity: 1;
+    border: 5px solid var(--color5);
+    border-radius: 20px;
+}
+
+.keen-slider__slide {
+    transform: scale(0.85);
+    transition: transform 0.4s ease, border 0.4s ease;
+}
+  
+.keen-slider__slide.keen-slider__slide--active {
+    transform: scale(1.15);
+    border: 2px solid var(--color3);
+    border-radius: 16px;
+}
+  
+  
 
 @keyframes heroPanIn {
     0% {

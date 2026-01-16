@@ -1,14 +1,34 @@
 import React from "react";
-import MainLayout from "./layouts/MainLayout";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import MainLayout from "./layouts/MainLayout";
 import "../styles/FrontPage.css"
 
 export default function () {
   const navigate = useNavigate();
+  const trackRef = useRef(null);
+  const itemsRef = useRef([]);
 
+  const [currentSlide, setCurrentSlide] = useState(1); // Start at 1 since centered
+
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    mode: "free-snap",
+    rubberband: true,
+    slides: {
+        perView: 3,
+        spacing: 25,
+    },
+    centered: true,
+    slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+    },
+  });
+  
   return (
     <MainLayout>
         <section className="front-page-wrapper">
@@ -26,7 +46,7 @@ export default function () {
                 <div className="testimonial-card">
                     <div className="testimonial-left">
                         <h1 className="testimonial-text">
-                            Detect Diseases of your Crops, in Real Time.
+                            Detect Diseases of your Tomatoes, in Real Time.
                         </h1>
                         <button className="learn-more-btn">Check Now</button>
                     </div>
@@ -40,7 +60,7 @@ export default function () {
                     <div className="visual-area">
                         <div className="image-card">
                             <img
-                            src="/section1-bg.png"
+                            src="/tomatofarmers.png"
                             alt="Plants and People"
                             />
                         </div>
@@ -52,17 +72,49 @@ export default function () {
                     <div className="content-area">
                         <h1>Where Plants Find<br />Their People.</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            This system is an AI-powered web application designed to help tomato 
+                            farmers detect fruit and leaf diseases early using image-based machine 
+                            learning. By analyzing images captured from multiple angles, the system 
+                            identifies possible diseases, suggests appropriate counteractive measures, 
+                            and provides timely email and in-app alerts. Through smart 
+                            technology and collaboration, the system aims to improve crop health, 
+                            reduce losses, and promote sustainable tomato farming.
                         </p>
                         <button className="learn-more-btn">Learn More</button>
                     </div>
                 </div>
             </div>
             <div className="section-four">
+                <h2 className="section-title">Detect These Diseases</h2>
+                <p className="section-subtitle">
+                    The following diseases can severly affect your crops and overall harvest. Detect and prevent them early on.
+                </p>
+                <div ref={sliderRef} className="carousel keen-slider">
+                    <div className={`keen-slider__slide carousel-item ${currentSlide === 0 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Calathea Plant" />
+                        <h3>Calathea Plant</h3>
+                    </div>
 
+                    <div className={`keen-slider__slide carousel-item ${currentSlide === 1 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Monstera Adansonii" />
+                        <h3>Monstera Adansonii</h3>
+                    </div>
+
+                    <div className={`keen-slider__slide carousel-item ${currentSlide === 2 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Crassula Ovata" />
+                        <h3>Crassula Ovata</h3>
+                    </div>
+
+                    <div className={`keen-slider__slide carousel-item ${currentSlide === 3 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Crassula Ovata" />
+                        <h3>Crassula Ovata</h3>
+                    </div>
+
+                    <div className={`keen-slider__slide carousel-item ${currentSlide === 4 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Crassula Ovata" />
+                        <h3>Crassula Ovata</h3>
+                    </div>
+                </div>
             </div>
         </section>
     </MainLayout>
