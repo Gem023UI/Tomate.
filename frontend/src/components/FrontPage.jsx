@@ -28,15 +28,38 @@ export default function () {
                         <h1 className="testimonial-text">
                             Detect Diseases of your Crops, in Real Time.
                         </h1>
-                        <a href="">Check Now</a>
+                        <button className="learn-more-btn">Check Now</button>
                     </div>
                     <div className="testimonial-right">
-                        <img src="/tomato2.png" alt="tomato" className="tomato-image" />
+                        <img src="/tomato.png" alt="tomato" className="tomato-image" />
                     </div>
                 </div>
             </div>
             <div className="section-three">
-
+                <div className="section-three-wrapper">
+                    <div className="visual-area">
+                        <div className="image-card">
+                            <img
+                            src="/section1-bg.png"
+                            alt="Plants and People"
+                            />
+                        </div>
+                        <div className="experience-card">
+                            <h2>10+</h2>
+                            <p>Diseases Detected<br />& Prevented</p>
+                        </div>
+                    </div>
+                    <div className="content-area">
+                        <h1>Where Plants Find<br />Their People.</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <button className="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
             </div>
             <div className="section-four">
 
