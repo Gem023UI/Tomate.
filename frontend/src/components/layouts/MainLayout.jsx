@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const MainLayout = ({ children }) => {
   return (
@@ -8,7 +9,10 @@ const MainLayout = ({ children }) => {
       <Header />
 
       {/* Main Content Area */}
-      <main className="flex-1 p-6 z-10">{children}</main>
+      <main className="flex-1 z-10">{children}</main>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };

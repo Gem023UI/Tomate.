@@ -290,12 +290,13 @@
 
 .section-four {
     width: 100vw;
-    height: 80vh;
+    min-height: 80vh;
     background: var(--color4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 60px 20px;
     box-sizing: border-box;
     color: var(--text-light);
 }
@@ -312,33 +313,22 @@
     font-size: 15px;
     text-align: center;
     margin-bottom: 60px;
+    max-width: 600px;
 }
   
 .carousel {
     width: 100%;
-    overflow: hidden;
-    cursor: grab;
-}
-  
-.carousel:active {
-    cursor: grabbing;
-}
-  
-.carousel-track {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.4s ease;
+    padding: 20px 0;
+    overflow: visible !important;
 }
   
 .carousel-item {
-    min-width: 280px;
+    width: 280px;
     height: 360px;
     border-radius: 24px;
     overflow: hidden;
     position: relative;
-    flex-shrink: 0;
-  
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease, border 0.4s ease;
     transform: scale(0.85);
     opacity: 0.6;
 }
@@ -357,28 +347,17 @@
     font-size: 16px;
     font-weight: 500;
     font-family: "Poppins", serif;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
   
 .carousel-item.active {
-    transform: scale(1.5);
+    transform: scale(1.10);
     opacity: 1;
-    border: 5px solid var(--color5);
-    border-radius: 20px;
-}
-
-.keen-slider__slide {
-    transform: scale(0.85);
-    transition: transform 0.4s ease, border 0.4s ease;
+    border: 5px solid var(--color3);
+    border-radius: 24px;
 }
   
-.keen-slider__slide.keen-slider__slide--active {
-    transform: scale(1.15);
-    border: 2px solid var(--color3);
-    border-radius: 16px;
-}
-  
-  
-
 @keyframes heroPanIn {
     0% {
       opacity: 0;

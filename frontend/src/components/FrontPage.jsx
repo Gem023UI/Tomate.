@@ -3,31 +3,17 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import MainLayout from "./layouts/MainLayout";
 import "../styles/FrontPage.css"
 
 export default function () {
   const navigate = useNavigate();
-  const trackRef = useRef(null);
-  const itemsRef = useRef([]);
-
-  const [currentSlide, setCurrentSlide] = useState(1); // Start at 1 since centered
-
-  const [sliderRef] = useKeenSlider({
-    loop: true,
-    mode: "free-snap",
-    rubberband: true,
-    slides: {
-        perView: 3,
-        spacing: 25,
-    },
-    centered: true,
-    slideChanged(slider) {
-        setCurrentSlide(slider.track.details.rel);
-    },
-  });
+  const [activeIndex, setActiveIndex] = useState(0);
   
   return (
     <MainLayout>
@@ -89,32 +75,71 @@ export default function () {
                 <p className="section-subtitle">
                     The following diseases can severly affect your crops and overall harvest. Detect and prevent them early on.
                 </p>
-                <div ref={sliderRef} className="carousel keen-slider">
-                    <div className={`keen-slider__slide carousel-item ${currentSlide === 0 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Calathea Plant" />
-                        <h3>Calathea Plant</h3>
-                    </div>
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={20}
+                    slidesPerView={3.5}
+                    centeredSlides={true}
+                    loop={true}
+                    grabCursor={true}
+                    onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                    className="carousel"
+                >
+                    <SwiperSlide className={`carousel-item ${activeIndex === 0 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Early Blight" />
+                        <h3>Early Blight</h3>
+                    </SwiperSlide>
 
-                    <div className={`keen-slider__slide carousel-item ${currentSlide === 1 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Monstera Adansonii" />
-                        <h3>Monstera Adansonii</h3>
-                    </div>
+                    <SwiperSlide className={`carousel-item ${activeIndex === 1 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Late Blight" />
+                        <h3>Late Blight</h3>
+                    </SwiperSlide>
 
-                    <div className={`keen-slider__slide carousel-item ${currentSlide === 2 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Crassula Ovata" />
-                        <h3>Crassula Ovata</h3>
-                    </div>
+                    <SwiperSlide className={`carousel-item ${activeIndex === 2 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Leaf Mold" />
+                        <h3>Leaf Mold</h3>
+                    </SwiperSlide>
 
-                    <div className={`keen-slider__slide carousel-item ${currentSlide === 3 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Crassula Ovata" />
-                        <h3>Crassula Ovata</h3>
-                    </div>
+                    <SwiperSlide className={`carousel-item ${activeIndex === 3 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Septoria Leaf Spot" />
+                        <h3>Septoria Leaf Spot</h3>
+                    </SwiperSlide>
 
-                    <div className={`keen-slider__slide carousel-item ${currentSlide === 4 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Crassula Ovata" />
-                        <h3>Crassula Ovata</h3>
-                    </div>
-                </div>
+                    <SwiperSlide className={`carousel-item ${activeIndex === 4 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 5 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 6 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 7 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 8 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 9 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 10 ? 'active' : ''}`}>
+                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
+                        <h3>Spider Mites</h3>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </section>
     </MainLayout>
