@@ -1,3 +1,16 @@
+:root {
+  --color1: #f8ff76; /* Primary */
+  --color2: #e9523a; /* Accent */
+  --color3: #2d7736; /* Secondary */
+  --color4: #081600; /* Tertiary */
+  --color5: #1b4e00; /* Complementary */
+  --text-light: white;
+  --transparent: rgba(255, 255, 255, 0.5);
+  --muted: black;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 .footer {
     width: 100%;
     background: var(--color4);

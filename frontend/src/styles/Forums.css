@@ -1,0 +1,531 @@
+:root {
+    --color1: #f8ff76; /* Primary */
+    --color2: #e9523a; /* Accent */
+    --color3: #2d7736; /* Secondary */
+    --color4: #081600; /* Tertiary */
+    --color5: #1b4e00; /* Complementary */
+    --text-light: white;
+    --transparent: rgba(255, 255, 255, 0.5);
+    --muted: black;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.forums-wrapper {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color4);
+    padding-top: 80px;
+  }
+  
+  /* Left Container - 20% */
+  .left-container {
+    width: 20vw;
+    padding: 20px;
+    background-color: var(--color4);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  
+  .nav-section h3 {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+  }
+  
+  .nav-item:hover {
+    background-color: var(--color5);
+    transform: translateX(5px);
+  }
+  
+  .nav-item svg {
+    width: 20px;
+    color: var(--color2);
+  }
+  
+  /* Center Container - 50% */
+  .center-container {
+    width: 50vw;
+    padding: 20px 30px;
+    overflow-y: auto;
+  }
+  
+  .create-post-card {
+    background: linear-gradient(135deg, var(--color5), var(--color4));
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .create-post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .create-post-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 20px;
+  }
+  
+  .create-post-input {
+    flex: 1;
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Posts Feed */
+  .posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .post-card {
+    background: linear-gradient(135deg, var(--color5), var(--color4));
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .post-author-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .post-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 20px;
+  }
+  
+  .post-author-info h4 {
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .post-time {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+  }
+  
+  .post-content h3 {
+    color: var(--text-light);
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .post-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .post-actions {
+    display: flex;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .action-btn.upvote:hover {
+    color: var(--color1);
+  }
+  
+  .action-btn.downvote:hover {
+    color: var(--color2);
+  }
+  
+  .action-btn.comment:hover {
+    color: var(--color3);
+  }
+  
+  /* Right Container - 30% */
+  .right-container {
+    width: 30vw;
+    padding: 20px;
+    background-color: var(--color4);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  
+  .blogs-section h3 {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-item {
+    background: linear-gradient(135deg, var(--color5), var(--color4));
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .blog-item:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .blog-item h4 {
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .blog-author {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+  
+  .modal-content {
+    background: linear-gradient(135deg, var(--color5), var(--color4));
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .modal-header h2 {
+    color: var(--text-light);
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 26px;
+    margin: 0;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 24px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .modal-body {
+    padding: 25px;
+  }
+  
+  .post-title-input,
+  .post-content-input {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .post-title-input:focus,
+  .post-content-input:focus {
+    outline: none;
+    border-color: var(--color3);
+  }
+  
+  .post-title-input {
+    font-weight: 600;
+  }
+  
+  .post-content-input {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .modal-footer {
+    padding: 15px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .post-btn {
+    background: linear-gradient(135deg, var(--color2), #d94329);
+    border: none;
+    padding: 12px 32px;
+    border-radius: 999px;
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .post-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+  
+  /* Comments Modal */
+  .comments-modal {
+    max-width: 700px;
+  }
+  
+  .comments-list {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .no-comments {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    padding: 40px 20px;
+  }
+  
+  .comment-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .comment-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  
+  .comment-content {
+    flex: 1;
+  }
+  
+  .comment-content h4 {
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+  }
+  
+  .comment-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+  }
+  
+  .comment-time {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+  }
+  
+  .add-comment {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .add-comment input {
+    flex: 1;
+    padding: 12px 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .add-comment input:focus {
+    outline: none;
+    border-color: var(--color3);
+  }
+  
+  .add-comment button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--color3), var(--color5));
+    border: none;
+    border-radius: 999px;
+    color: var(--text-light);
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .add-comment button:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .left-container {
+      width: 25vw;
+    }
+    
+    .center-container {
+      width: 45vw;
+    }
+    
+    .right-container {
+      width: 30vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .forums-wrapper {
+      flex-direction: column;
+    }
+    
+    .left-container,
+    .center-container,
+    .right-container {
+      width: 100vw;
+      position: static;
+      height: auto;
+    }
+    
+    .left-container,
+    .right-container {
+      border: none;
+    }
+  }

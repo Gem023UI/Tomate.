@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import FrontPage from "./components/FrontPage.jsx"
-import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import FrontPage from "./components/FrontPage.jsx"
+import Forums from "./components/Forums.jsx"
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,7 @@ function App() {
       <div className="page-content">
         <Routes>
           <Route path="/" element={<FrontPage />} />
+          <Route path="/forums" element={<Forums />} />
         </Routes>
       </div>
     </Router>
