@@ -141,6 +141,34 @@ export default function () {
                     </SwiperSlide>
                 </Swiper>
             </div>
+            <div className="section-five">
+                <div className="tech-ribbon">
+                    <div className="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                        <span>React</span>
+                    </div>
+                    <div className="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                        <span>CSS</span>
+                    </div>
+                    <div className="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+                        <span>TensorFlow</span>
+                    </div>
+                    <div className="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM" />
+                        <span>NPM</span>
+                    </div>
+                    <div className="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                        <span>Node.js</span>
+                    </div>
+                    <div className="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </MainLayout>
   );
