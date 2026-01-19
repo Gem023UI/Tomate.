@@ -43,34 +43,6 @@
     }
 }
   
-  .chatbot-head:hover {
-    animation: bounce 3s ease-in-out infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 45% {
-      transform: translateY(0);
-    }
-    15% {
-        transform: translateY(0px);
-    }
-    20% {
-      transform: translateY(-100px);
-    }
-    25% {
-      transform: translateY(0);
-    }
-    30% {
-      transform: translateY(-30px);
-    }
-    35% {
-        transform: translateY(0px);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-  }
-  
   .chatbot-head.hidden {
     opacity: 0;
     pointer-events: none;

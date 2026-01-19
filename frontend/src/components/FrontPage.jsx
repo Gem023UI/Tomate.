@@ -91,53 +91,63 @@ export default function () {
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 1 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Late Blight" />
-                        <h3>Late Blight</h3>
+                        <img src="/diseases/anthracnose.png" alt="Late Blight" />
+                        <h3>Anthracnose</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 2 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Leaf Mold" />
-                        <h3>Leaf Mold</h3>
+                        <img src="/diseases/fusarium.png" alt="Leaf Mold" />
+                        <h3>Fusarium</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 3 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Septoria Leaf Spot" />
-                        <h3>Septoria Leaf Spot</h3>
+                        <img src="/diseases/powderymilddew.png" alt="Septoria Leaf Spot" />
+                        <h3>Powdery Mildew</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 4 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/septorialeafspot.png" alt="Spider Mites" />
+                        <h3>Septoria Leaf Spot</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 5 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/botrytisgraymold.png" alt="Spider Mites" />
+                        <h3>Botrytis Gray Mold</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 6 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/bacterialspeck.png" alt="Spider Mites" />
+                        <h3>Bacterial Speck</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 7 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/blossomendrot.png" alt="Spider Mites" />
+                        <h3>Blossom End Root</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 8 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/buckeyerot.png" alt="Spider Mites" />
+                        <h3>Buckeye Rot</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 9 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/pithnecrosis.png" alt="Spider Mites" />
+                        <h3>Tomato Pith Necrosis</h3>
                     </SwiperSlide>
 
                     <SwiperSlide className={`carousel-item ${activeIndex === 10 ? 'active' : ''}`}>
-                        <img src="/diseases/earlyblight.png" alt="Spider Mites" />
-                        <h3>Spider Mites</h3>
+                        <img src="/diseases/dampingoff.png" alt="Spider Mites" />
+                        <h3>Damping Off</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 11 ? 'active' : ''}`}>
+                        <img src="/diseases/sunscald.png" alt="Spider Mites" />
+                        <h3>Sunscald</h3>
+                    </SwiperSlide>
+
+                    <SwiperSlide className={`carousel-item ${activeIndex === 12 ? 'active' : ''}`}>
+                        <img src="/diseases/bacterialspot.png" alt="Spider Mites" />
+                        <h3>Bacterial Spot</h3>
                     </SwiperSlide>
                 </Swiper>
             </div>
